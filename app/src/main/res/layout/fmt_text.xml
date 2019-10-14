@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="90dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <LinearLayout
+                android:layout_marginTop="2dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:minWidth="20dp"
+                    android:minHeight="30dp"
+                    android:padding="10dp"
+                    android:layout_margin="1dp"
+                    android:textColor="#05e0f4"
+                    android:id="@+id/text_up"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="setPage"
+                    android:text="上一页"
+                    android:textSize="18sp"
+                    android:background="@drawable/button"/>
+
+                <Button
+                    android:minWidth="20dp"
+                    android:minHeight="30dp"
+                    android:padding="10dp"
+                    android:layout_margin="1dp"
+                    android:textColor="#05e0f4"
+                    android:id="@+id/text_dw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="setPage"
+                    android:text="下一页"
+                    android:textSize="18sp"
+                    android:background="@drawable/button"/>
+
+                <Button
+                    android:minWidth="20dp"
+                    android:minHeight="30dp"
+                    android:padding="10dp"
+                    android:textColor="#05e0f4"
+                    android:id="@+id/text_copy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="80dp"
+                    android:text="复制"
+                    android:onClick="copyText"
+                    android:textSize="18sp"
+                    android:background="@drawable/button"/>
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="字体大小设置："
+                android:textSize="16sp" />
+
+            <SeekBar
+                android:id="@+id/text_textSize"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="15dp"
+                android:max="30"
+                android:progress="10" />
+
+
+
+            <EditText
+                android:id="@+id/text_context"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="无内容"
+                android:textSize="10sp"
+                />
+
+
+        </LinearLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>

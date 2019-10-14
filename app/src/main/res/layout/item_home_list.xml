@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="2dp"
+    android:elevation="2dp"
+    android:background="@drawable/text_background_round">
+
+
+    <ImageView
+        android:id="@+id/item_home_list_img"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="0dp"
+        android:src="@drawable/b1"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout"
+         />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:padding="5px"
+        >
+
+
+        <TextView
+            android:id="@+id/item_home_list_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:text="我是标题"
+            android:gravity="center"
+            android:textColor="#ef072e"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/item_home_list_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:gravity="center"
+            android:text="我是内容我是内容我是内容我是内容是内容我是内容是内容我是内容"
+            android:textColor="#ef14ca"
+            android:textSize="15sp" />
+
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

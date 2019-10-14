@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="选择图片："
+                android:textSize="22sp"
+                android:textColor="@color/red"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/one_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:overScrollMode="never" />
+
+            <CheckBox
+                android:id="@+id/one_isStr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="是否自定义文本"
+                android:textColor="#f24040"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:id="@+id/one_layout1">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="请务必输入超过5个字符，否则自定义无效"
+                    android:textColor="@color/red"
+                    android:textSize="16sp"/>
+                <EditText
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="E8XOHLTIKi=+;:,."
+                    android:id="@+id/one_str"/>
+            </LinearLayout>
+
+
+            <CheckBox
+                android:id="@+id/one_isColor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="是否彩色"
+                android:textColor="#f24040"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/one_layout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+                <Button
+                    android:onClick="oneSave"
+                    android:minWidth="20dp"
+                    android:minHeight="30dp"
+                    android:padding="10dp"
+                    android:layout_margin="1dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="保存到本地"
+                    android:background="@drawable/button"
+                    android:textColor="#05e0f4"/>
+
+                <Button
+                    android:minWidth="20dp"
+                    android:minHeight="30dp"
+                    android:padding="10dp"
+                    android:layout_margin="1dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="查看文本"
+                    android:onClick="lookText"
+                    android:background="@drawable/button"
+                    android:textColor="#05e0f4"/>
+
+                <!--<Button-->
+                    <!--android:minWidth="20dp"-->
+                    <!--android:minHeight="30dp"-->
+                    <!--android:padding="10dp"-->
+                    <!--android:layout_margin="1dp"-->
+                    <!--android:textColor="#05e0f4"-->
+                    <!--android:background="@drawable/button"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="分享" />-->
+            </LinearLayout>
+
+            <pl.droidsonroids.gif.GifImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/one_image"/>
+
+            <Button
+                android:layout_margin="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/button"
+                android:onClick="createOneImg"
+                android:text="制作字符图"
+                android:textColor="#0da4db"
+                android:textSize="22dp" />
+
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+
+
+</android.support.constraint.ConstraintLayout>

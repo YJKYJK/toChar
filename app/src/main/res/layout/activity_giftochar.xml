@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="选择图片："
+                android:textSize="22sp"
+                android:textColor="@color/red"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/gifto_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:overScrollMode="never" />
+
+            <CheckBox
+                android:id="@+id/gifto_isStr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="是否自定义文本"
+                android:textColor="#f24040"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:id="@+id/gifto_layout1">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="请务必输入超过5个字符，否则自定义无效"
+                    android:textColor="@color/red"
+                    android:textSize="16sp"/>
+                <EditText
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="E8XOHLTIKi=+;:,."
+                    android:id="@+id/gifto_str"/>
+            </LinearLayout>
+
+
+            <CheckBox
+                android:id="@+id/gifto_isColor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="是否彩色"
+                android:textColor="#f24040"
+                android:textSize="18sp" />
+
+            <CheckBox
+                android:id="@+id/gifto_setSize"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="自定义宽高"
+                android:textColor="#f24040"
+                android:textSize="18sp" />
+
+        <LinearLayout
+            android:id="@+id/gifto_sizeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:layout_below="@+id/gif_switch"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="30dp"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="图片宽度: "
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/gifto_width"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:inputType="number"
+                    android:text="500" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="30dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="图片高度: "
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/gifto_heigth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="500" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+            <TextView
+
+                android:id="@+id/gifto_speedText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@color/red"
+                android:text="动图速度配置: 100 毫秒"/>
+
+            <SeekBar
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:id="@+id/gifto_speed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="1000"
+                android:progress="100"
+                />
+
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/gifto_layout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+                <Button
+                    android:onClick="giftoSave"
+                    android:minWidth="20dp"
+                    android:minHeight="30dp"
+                    android:padding="10dp"
+                    android:layout_margin="1dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="保存到本地"
+                    android:background="@drawable/button"
+                    android:textColor="#05e0f4"/>
+
+                <Button
+                    android:minWidth="20dp"
+                    android:minHeight="30dp"
+                    android:padding="10dp"
+                    android:layout_margin="1dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="查看文本"
+                    android:onClick="lookText"
+                    android:background="@drawable/button"
+                    android:textColor="#05e0f4"/>
+
+                <!--<Button-->
+                    <!--android:minWidth="20dp"-->
+                    <!--android:minHeight="30dp"-->
+                    <!--android:padding="10dp"-->
+                    <!--android:layout_margin="1dp"-->
+                    <!--android:textColor="#05e0f4"-->
+                    <!--android:background="@drawable/button"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="分享" />-->
+            </LinearLayout>
+
+            <pl.droidsonroids.gif.GifImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/gifto_image"/>
+
+            <Button
+                android:layout_margin="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/button"
+                android:onClick="createGifToImg"
+                android:text="制作字符图"
+                android:textColor="#0da4db"
+                android:textSize="22dp"
+                />
+
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+
+
+</android.support.constraint.ConstraintLayout>

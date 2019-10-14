@@ -1,0 +1,37 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="yanyan.com.tochar.MainActivity">
+    <item
+        android:id="@+id/tochar_gif"
+        android:orderInCategory="100"
+        android:title="生成动态图"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/tochar_update"
+        android:orderInCategory="100"
+        android:title="检查更新"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/tochar_share"
+        android:orderInCategory="100"
+        android:title="分享软件"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/tochar_join"
+        android:orderInCategory="100"
+        android:title="加入QQ群"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/tochar_about"
+        android:orderInCategory="100"
+        android:title="关于"
+        app:showAsAction="never" />
+
+
+
+
+</menu>
